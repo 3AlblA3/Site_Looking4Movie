@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <title>Looking4Movie</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><h1 class="header__h1">Looking4Movie</h1></a>
+        <form class="header__form" action="recherche" method="post">
+            <input class="header__form__input" type="text" id="name" name="name" placeholder="Votre recherche">
+            <button class="header__form__button" type="submit" id="submit">Recherche</button>
+            <!-- <button class="header__form__button" type="button" onclick="getValue()" id="button">Recherche</button> -->
+
+            <!-- On aurait pu rajouter onclick="nomFonction" pour remplacer l'addEventListener -->
+        </form>
+    </header>
+    <main>
+        <section id="section" class="main__section"></section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
