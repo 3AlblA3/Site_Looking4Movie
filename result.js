@@ -38,6 +38,6 @@ function getFilm(){
 
 getFilm()
 
-import { research } from "./header.js";
+// import { research } from "./header.js";
 
-research()
+// research()
