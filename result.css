@@ -5,9 +5,7 @@ body{
 header{
     background-color: rgba(255, 230, 0, 0.695);
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
     margin-bottom: 2rem;
     position: sticky;
     position: -webkit-sticky;
@@ -17,10 +15,21 @@ header{
 
 }
 
-.header__h1{
+.header__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
-font-weight: bolder;
-color: black;
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {text-decoration: underline;}
+
+.header__h1{
+    color: black;
     @media screen and (min-width:441px){
         font-size: 2rem;
     }
@@ -28,6 +37,8 @@ color: black;
         font-size: 1rem;
     }
 }
+
+h1, h2, h3, h4, h5, h6{font-family: Raleway;}
 
 .header__form{
     display: flex;
@@ -65,6 +76,7 @@ color: black;
 
 main{
     background-color: white;
+    padding: 1rem;
 }
 
 .main__section{
@@ -77,9 +89,62 @@ a{
     text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6{font-family: Raleway;}
-
 .main__section__article{
+    background-color: rgb(189, 189, 189);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 20rem;
+    height: 33rem;
+    margin-bottom: 2rem;
+    color: black;
+    border-radius: 1rem;
+    transition-duration: 0.2s;
+    animation-duration: 1500ms;
+    animation-timing-function: cubic-bezier(0,.43,.49,.99);
+    animation-name: entrance;
+}
+
+@keyframes entrance {
+    from { 
+    display: none;
+    opacity: 0;
+    transform: translateY(10rem);}
+    to { 
+    display: visible ;
+    opacity: 1;
+    transform: translateY(0rem);
+    }
+}
+    
+
+.main__section__article:hover{
+    scale: 105%;
+}
+
+.main__section__article__h2{
+    margin: 0;
+    height: 4rem;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.main__section__article__h3{
+    margin-top: 0;
+    height: 1rem;
+    padding:0;
+    text-decoration: none
+}
+
+.main__section__article__p{
+    display: none;
+}
+
+
+.main__section__article__result{
     background-color: rgb(189, 189, 189);
     display: flex;
     align-items: center;
@@ -103,4 +168,8 @@ h1, h2, h3, h4, h5, h6{font-family: Raleway;}
     margin: 0;
     margin-bottom: 1rem;
     text-align: center;
+}
+
+.main__section__article__img{
+    height: 75%;
 }

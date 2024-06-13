@@ -5,9 +5,7 @@ body{
 header{
     background-color: rgba(255, 230, 0, 0.695);
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
     margin-bottom: 2rem;
     position: sticky;
     position: -webkit-sticky;
@@ -16,6 +14,19 @@ header{
     border-bottom: solid black;
 
 }
+
+.header__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {text-decoration: underline;}
 
 .header__h1{
     color: black;
