@@ -1,19 +1,6 @@
-// API key: da9c0093
 
-const form = document.querySelector('form');
 
-let URL = "https://www.omdbapi.com/";
-
-let key = "da9c0093";
-
-let section = document.getElementById("section")
-
-// On peut remplacer l'eventListener par la fonction on click aussi dans le html
-
-//Si on avait fait le onclick dans le html: function myFonction(){
-//document.getElementbyId("myValue").value}
-
-function research(){
+export function research(){
 
     form.addEventListener("submit", (event) => {
         // event.preventDefault pour empecher le rechargement de la page //
@@ -61,18 +48,3 @@ function research(){
       getApi();
     })
 }
-
-research()
-
-
-
-
-
-
-
-
-
-
-
-
-
