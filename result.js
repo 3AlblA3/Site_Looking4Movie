@@ -19,6 +19,8 @@ console.log(filmURL)
 
 function getFilm(){
 
+    // Le fetch de l'api filmURL va nous ramener l'objet Json du film 
+
     fetch(filmURL)
     .then(response => response.json())
     .then(data => {console.log(data)
@@ -37,7 +39,3 @@ function getFilm(){
 }
 
 getFilm()
-
-// import { research } from "./header.js";
-
-// research()
