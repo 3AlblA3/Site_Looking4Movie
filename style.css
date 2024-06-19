@@ -12,6 +12,7 @@ header{
     overflow: auto;
     float: top;
     border-bottom: solid black;
+    padding: 1rem;
 
 }
 
@@ -19,6 +20,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 a{
@@ -34,17 +36,23 @@ a:hover {text-decoration: underline;}
         font-size: 2rem;
     }
     @media screen and (max-width:440px){
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
-h1, h2, h3, h4, h5, h6{font-family: Raleway;}
+h1, h2, h3, h4, h5, h6{
+    font-family: Raleway;
+    @media screen and (max-width:440px){
+        font-size: 0.6rem;
+    }
+}
 
 .header__form{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 
 .header__form__input{
 
@@ -56,23 +64,31 @@ h1, h2, h3, h4, h5, h6{font-family: Raleway;}
 
     }
     @media screen and (max-width:440px){
-        width: 10rem;
+        width: 5rem;
+        padding-left: 0.2rem;
     }
     
 }
 
 .header__form__button{
     height: 2.4rem;
-    width:10rem;
+    width:3rem;
     margin-left: 2rem;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     color: white;
     font-weight: bolder;
     border-radius: 1rem;
-    @media screen and (max-width:440px){
-        width: 6rem;
+
 }
+
+.header__form__button::after{
+    content: url("ressources/icones/chercher.png");
+    position: relative;
+    z-index: 3;
 }
+
+.header__row__panier__img{width: 1.5rem;
+height:1.5rem}
 
 main{
     background-color: white;
@@ -89,7 +105,8 @@ a{
     text-decoration: none;
 }
 
-.main__section__article{
+.main__section__article,
+.main__section__article__result{
     background-color: rgb(189, 189, 189);
     display: flex;
     align-items: center;
@@ -104,6 +121,13 @@ a{
     animation-duration: 1500ms;
     animation-timing-function: cubic-bezier(0,.43,.49,.99);
     animation-name: entrance;
+}
+
+.main__section__article__result{
+    height: auto;
+    width: 30rem;
+    margin: auto;
+
 }
 
 @keyframes entrance {
@@ -146,4 +170,26 @@ a{
 
 .main__section__article__img{
     height: 75%;
+}
+
+.main__section__cart__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: grey;
+    padding: 1rem;
+    @media screen and (max-width:440px){
+        flex-direction: column;
+    }
+}   
+
+.main__section__cart__container__aside{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.main__section__h2{
+    text-align: center;
+    margin: auto;
 }

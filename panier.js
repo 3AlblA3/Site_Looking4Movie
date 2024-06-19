@@ -1,21 +1,43 @@
-// API key: da9c0093
+let section = document.getElementById("section")
 
-const form = document.querySelector('form');
+// URLSearchParams sert à entrer un bout d'URL, ici le window.location.search remplace notre URL présente dans notre navigateur
+
+
+//Récupération des pièces eventuellement stockées dans le localStorage
+
+
+//Ici on récupére le bout de notre URL qui sert d'ID pour notre film à afficher
 
 let URL = "https://www.omdbapi.com/";
 
 let key = "da9c0093";
 
-let section = document.getElementById("section")
+let getMovieId = window.localStorage.getItem('movieID');
 
-section.innerHTML=`
-<h2 class="main__section__h2">Please enter your movie</h2>
+   movieIdParsed = JSON.parse(getMovieId);
+
+console.log(movieIdParsed)
+
+if (movieIdParsed==null){
+    section.innerHTML =`<h2 class="main__section__h2">Your cart is empty!<h2>`
+}else{
+    section.innerHTML = `
+<article class="main__section__cart__container">
+    <img class="main__section__cart__container__img" src="${movieIdParsed.Poster}">
+    <div class="main__section__cart__container__aside">
+        <h3>${movieIdParsed.Title}</h3>
+        <button id="vider" onclick="vider()">Delete movie from the cart</button>
+    </div>
+</article>
 `
+}
 
-// On peut remplacer l'eventListener par la fonction on click aussi dans le html
+function vider(){
+    window.localStorage.removeItem('movieID');
+    section.innerHTML=`<h2 class="main__section__h2">Your cart is empty!<h2>`
+}
 
-//Si on avait fait le onclick dans le html: function myFonction(){
-//document.getElementbyId("myValue").value}
+const form = document.querySelector('form');
 
 function research(){
 
@@ -78,16 +100,5 @@ function research(){
 }
 
 research()
-
-
-
-
-
-
-
-
-
-
-
 
 

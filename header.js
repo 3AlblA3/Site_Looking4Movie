@@ -1,6 +1,9 @@
 
 
-export function research(){
+export async function research(){
+
+    
+const form = document.querySelector('form');
 
     form.addEventListener("submit", (event) => {
         // event.preventDefault pour empecher le rechargement de la page //
