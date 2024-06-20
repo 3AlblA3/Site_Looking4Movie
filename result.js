@@ -35,29 +35,21 @@ function getFilm(){
             <h3 class="main__section__article__h3">${data.Director}</h3>
             <h5 class="main__section__article__h5">${data.Actors}</h5>
             <p class="main__section__article__result__p">${data.Plot}</p>
-            <p class="main__section__article__p">Runtime:${data.Runtime}</p>
-            <a href="panier.html"><button>Add movie to cart</button><a>
+            <p class="main__section__article__result__p">This movie had been added to the cart</p>
+            <a href="panier.html"><button class="main__section__article__button">Go to Cart</button><a>
         </article>
-     `;
+        `;
 
-     let movieIDStringed = JSON.stringify(data)
+        let movieIDStringed = JSON.stringify(data)
 
-    localStorage.setItem("movieID", movieIDStringed)
-
-    let id = localStorage.getItem("movieID")
-
-    let idParsed = JSON.parse(id)
-
-    console.log(idParsed)
-
+        localStorage.setItem("movieID", movieIDStringed)
 
         document.getElementById("section").innerHTML += html;
-    })
+        })
     .catch(error => console.error(error, "error")); 
 }
 
 getFilm()
-
 
 const form = document.querySelector('form');
 

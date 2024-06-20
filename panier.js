@@ -14,7 +14,7 @@ let key = "da9c0093";
 
 let getMovieId = window.localStorage.getItem('movieID');
 
-   movieIdParsed = JSON.parse(getMovieId);
+movieIdParsed = JSON.parse(getMovieId);
 
 console.log(movieIdParsed)
 
@@ -26,7 +26,7 @@ if (movieIdParsed==null){
     <img class="main__section__cart__container__img" src="${movieIdParsed.Poster}">
     <div class="main__section__cart__container__aside">
         <h3>${movieIdParsed.Title}</h3>
-        <button id="vider" onclick="vider()">Delete movie from the cart</button>
+        <button class="main__section__cart__container__aside__button" id="vider" onclick="vider()">Delete movie from cart</button>
     </div>
 </article>
 `
@@ -51,7 +51,6 @@ function research(){
 
         let search = document.getElementById("name").value;
       
-
         let regex = new RegExp("[!@#\$%\^\&*\)\(+=._-]");
         let resultat = regex.test(search);
         console.log(resultat);
