@@ -192,7 +192,7 @@ a{
         padding:0.5rem;
     }
     .header__form__input{
-        width: 5rem;
+        width: 7rem;
         padding-left: 0.2rem;
     }
     .header__row__panier__img{
@@ -204,8 +204,19 @@ a{
         height: 2.2rem;
         padding-left: 0.2rem;
     }
+    .main__section__article,
+    .main__section__article__result
+    .main__section__cart__container{
+        width: 17rem;
+    }
     .main__section__cart__container{
         flex-direction: column;
+        align-items: center;
+    }
+    .main__section__article__img,
+    .main__section__article__result__img,
+    .main__section__cart__container__img{
+        width: 85%;
     }
 
 }
