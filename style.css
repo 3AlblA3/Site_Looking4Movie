@@ -36,14 +36,14 @@ a:hover {text-decoration: underline;}
         font-size: 2rem;
     }
     @media screen and (max-width:440px){
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: Raleway;
+    text-align: center;
     @media screen and (max-width:440px){
-        font-size: 0.6rem;
     }
 }
 
@@ -223,8 +223,13 @@ a{
 .main__section__cart__container__aside{
     display: flex;
     flex-direction: column;
-    padding-left: 1rem;
+    padding: 1rem;
     align-items: center;
+}
+
+.main__section__cart__p{
+    text-align: center;
+    width: 15rem;
 }
 
 .main__section__h2{
